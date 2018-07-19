@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://47.95.204.81:5432/test
+    url: jdbc:postgresql://47.95.204.81:5432/user
     username: wuao
     password: wuao1992
     dbcp2:

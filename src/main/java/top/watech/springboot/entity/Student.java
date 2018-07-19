@@ -11,9 +11,9 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "last_name",length = 50,nullable = false)
-    private String lastName;
-    private String email;
+    @Column(name = "username",length = 50,nullable = false)
+    private String username;
+    private String pwd;
 
     public Integer getId() {
         return id;
@@ -23,19 +23,19 @@ public class Student {
         this.id = id;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 }

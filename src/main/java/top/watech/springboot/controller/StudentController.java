@@ -24,13 +24,15 @@ public class StudentController {
         return student;
     }
 
-    //测试数据 ht://localhost:8080/student?lastName=haha&email=aa
+    //测试数据 http://localhost:8080/student?lastName=haha&email=aa
     @GetMapping("/student")
     public Student insertStudent(Student student){
         Student save = studRepository.save(student);
         return save;
     }
 
-
+//    public Student login(){
+//
+//    }
 
 }
