@@ -26,7 +26,7 @@ public interface WeiboRepository extends JpaRepository<Weibo,Long>,JpaSpecificat
     @Query("select w from Weibo w where w.user.username = :username")
     List<Weibo> searchUserWeibo(@Param("username") String username, Sort sort);
 
-    //改某条微博内容
+    //改某条微博内容update
     @Modifying
     @Transactional(readOnly = false)
     @Query("update Weibo w set w.weiboText = :text where w.user = :user")
@@ -34,4 +34,6 @@ public interface WeiboRepository extends JpaRepository<Weibo,Long>,JpaSpecificat
 
     //返回值是一个泛型对象Page<T>
     Page<Weibo> findByUserIsAndWeiboTextContaining(User user, String weiboText, Pageable pageable);
+
+
 }
