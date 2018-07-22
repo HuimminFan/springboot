@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import top.watech.springboot.entity.User;
 import top.watech.springboot.repository.UserRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -33,5 +34,14 @@ public class UserController {
         User save = userRepository.save(user);
 //        userRepository.getByUsernameIsAndUserpwdIs()
         return save;
+    }
+
+    public void saveAll(){
+        List<User> users = new ArrayList<>();
+
+        for (int i = 'a';i<='z';i++){
+            User user = new User();
+            user.setUsername();
+        }
     }
 }

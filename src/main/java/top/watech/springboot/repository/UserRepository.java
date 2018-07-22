@@ -3,12 +3,13 @@ package top.watech.springboot.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import top.watech.springboot.entity.User;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 /**
  * Created by fhm on 2018/7/19.
  */
-public interface UserRepository extends JpaRepository<User,Long> {
+public interface UserRepository extends JpaRepository<User,Long>,Pageable {
     //查询用户名称包含username字符串的用户对象
     List<User> findByUsernameContaining(String username);
 
